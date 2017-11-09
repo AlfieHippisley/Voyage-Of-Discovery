@@ -54,7 +54,7 @@ void draw() {
 
 void displayGame() {
   
-  camera(width/2+100, height/2-200, 1000, width/2, height/2, 0, 0, 1, 0);
+  camera(width/2+(sin(bobbing)*100), height/2-200, 1000, width/2, height/2, 0, 0, 1, 0);
 
   background(20, 120, 210);
 

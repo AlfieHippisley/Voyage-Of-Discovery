@@ -6,15 +6,6 @@
     float Time = 60;
     uiBoxes(score,Time);
   }
-  /**
-  
-  Score system reminder for us
-  
-  Faster you hit the button the more score you get
-  Questions should change there posistion in the list
-  Should show timer
-  
-  **/
   
   void uiBoxes(int score, float time) {
     
@@ -24,27 +15,23 @@
     fill(50,100,200);
     
     // Score counter
-    rect(-20,620,200,100,20);
+    rect(0,-100,200,100,20);
+    rect(450,-100,300,100,20);
+    rect(1020,-100,200,100,20);
     
+    translate(0,0,0.01);
     
-    // Objective
-    rect(450,620,300,100,20);
-    text(time, 520,690);
-    textSize(20);
-    text("Time:", 20, 655);
-    
-    // Username/Time
-    rect(1020,620,200,100,20);
-    
-    // Display score
-    textSize(32);
     fill(255);
-    text(score, 20,690);
-    textSize(20);
-    text("Score:", 20, 655);
     
-    text(time, 1050,690);
-    text("Time:", 1050, 655);
+    textSize(20);
+    text("Score:", 20, -60);
+    text("Time:", 1050, -60);
+    
+    textSize(32);
+    text(score, 20,-20);
+    text(time, 1040,-20);
+    
+    translate(0,0,-0.01);
   
   }
   
@@ -75,11 +62,13 @@
   }
   
   void menuButtons(){
+    
     Button b1 = new Button(1,45,150,"Play");
     Button b2 = new Button(2,45,200,"Leaderboard");
     Button b3 = new Button(3,45,250,"Controls");
     Button b4 = new Button(4,45,300,"About");
     Button b5 = new Button(5,45,350,"Credits");
+    
     b1.drawButton();
     b2.drawButton();
     b3.drawButton();
@@ -87,14 +76,6 @@
     b5.drawButton();   
   }
   
-  
-  public void Play() { 
-    
-    gameState = 0;
-       
-  }
-
-
 /**
 
 Score system reminder for us

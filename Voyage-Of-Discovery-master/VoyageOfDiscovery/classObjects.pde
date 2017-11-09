@@ -89,6 +89,7 @@ class Objects {
       sphere(2000+(100*i));
     }
     
+    rotateX(-PI/3);
     popMatrix();
   }
   
