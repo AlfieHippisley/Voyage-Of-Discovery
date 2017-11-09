@@ -6,17 +6,15 @@ ControlP5 cp5;
 
 void setup(){
  // Setup Canvas
- size(1200,700);
- background(125);
-  MenuButtons();
- 
-  
+   size(1200,700);
+   background(125);
+   MenuButtons();
+   gameUI();
 }
 
 void draw(){
   mainMenu();
- 
-  
+
 }
 
 void gameUI(){
@@ -75,46 +73,26 @@ void displayQuestions(){
 }
 
 void mainMenu(){
-//PImage shipWheel;
+
   
   stroke(255);
   strokeWeight(5);
   fill(0,148,255);
   rect(-10,-10,300,1200);
-/**shipWheel = loadImage("shipWheel.jpg"); 
-  image(shipWheel,45,650);
-  **/
+
   
   noStroke();
   fill(255);
   textSize(30);
   text("Voyage of the\n   Discovery", 45, 60);
-  //rect(45,150,200,40,20);
-  rect(45,200,200,40,20);
-  rect(45,250,200,40,20);
-  rect(45,300,200,40,20);
-  rect(45,350,200,40,20);
-  textSize(15);
-  fill(0,148,255);
-  //text("Play", 70, 175);
-  text("Leaderboard", 70, 225);
-  text("Controls", 70, 275);
-  text("About", 70,325);
-  text("Credits", 70,375);
-
 
 
  
+ 
+
 
 
   
-}
-
-public void Play() { 
-  
-  println("pressed " + millis());
-  println("");
-     
 }
 
 void MenuButtons(){
@@ -161,6 +139,15 @@ void MenuButtons(){
   .getCaptionLabel().align(ControlP5.LEFT, ControlP5.CENTER);
   
 }
+
+
+public void play() { 
+  
+  println("pressed " + millis());
+  println("");
+     
+}
+
 
 
 /**
