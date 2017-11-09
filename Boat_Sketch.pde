@@ -4,6 +4,7 @@ int w = 5000; // Width of Ocean
 int h = 6000; // Height of Ocean
 float bobbing = 0;
 float windSpeed = 0;
+boolean boo = false;
 
 Island[] island;
 float[][] terrain;
@@ -55,6 +56,13 @@ void draw() {
       }
     }
   }
+  
+  
+  for (int i=0;i<10;i++) {
+    if (island[i].distance<0&&island[i].distance>-500&&boo) {
+      // 
+    }
+  }
 
-  println(frameRate);
+  //println(frameRate);
 }
