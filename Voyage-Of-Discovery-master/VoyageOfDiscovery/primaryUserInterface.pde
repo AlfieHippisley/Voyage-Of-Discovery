@@ -3,14 +3,19 @@ import controlP5.*;
 ControlP5 cp5;
 
 
+
 void setup(){
  // Setup Canvas
  size(1200,700);
  background(125);
+  MenuButtons();
+ 
+  
 }
 
 void draw(){
   mainMenu();
+ 
   
 }
 
@@ -97,14 +102,8 @@ void mainMenu(){
   text("About", 70,325);
   text("Credits", 70,375);
 
-  cp5=new ControlP5(this);
-  cp5.addButton("Play")
-  .setPosition(45,150)       
-  .setSize(200,40);
-  
-   cp5.addButton("Leaderboard")
-  .setPosition(45,200)       
-  .setSize(200,40);
+
+
  
 
 
@@ -116,6 +115,51 @@ public void Play() {
   println("pressed " + millis());
   println("");
      
+}
+
+void MenuButtons(){
+  PFont font = createFont("arial",15);
+  cp5=new ControlP5(this);
+  cp5.addButton("      Play")
+  .setPosition(45,150)       
+  .setSize(200,40)
+  .setColorBackground( color(100,190,255 ) )
+  .setFont(font)
+  .getCaptionLabel().align(ControlP5.LEFT, ControlP5.CENTER);
+
+  cp5=new ControlP5(this);
+  cp5.addButton("      Leaderboard")
+  .setPosition(45,200)       
+  .setSize(200,40)
+  .setColorBackground( color(100,190,255 ) )
+  .setFont(font)
+  .getCaptionLabel().align(ControlP5.LEFT, ControlP5.CENTER);
+  
+  cp5=new ControlP5(this);
+  cp5.addButton("      Controls")
+  .setPosition(45,250)       
+  .setSize(200,40)
+  .setColorBackground( color(100,190,255 ) )
+  .setFont(font)
+  .getCaptionLabel().align(ControlP5.LEFT, ControlP5.CENTER);
+  
+  cp5=new ControlP5(this);
+  cp5.addButton("      About")
+  .setPosition(45,300)       
+  .setSize(200,40)
+  .setColorBackground( color(100,190,255 ) )
+  .setFont(font)
+  .getCaptionLabel().align(ControlP5.LEFT, ControlP5.CENTER);
+  
+  
+  cp5=new ControlP5(this);
+  cp5.addButton("      Credits")
+  .setPosition(45,350)       
+  .setSize(200,40)
+  .setColorBackground( color(100,190,255 ) )
+  .setFont(font)
+  .getCaptionLabel().align(ControlP5.LEFT, ControlP5.CENTER);
+  
 }
 
 
