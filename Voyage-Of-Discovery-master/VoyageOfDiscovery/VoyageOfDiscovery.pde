@@ -1,6 +1,4 @@
-import controlP5.*; //<>//
-
-int cols, rows; 
+int cols, rows;  //<>//
 int scl = 50;
 int w = 5000; // Width of Ocean
 int h = 6000; // Height of Ocean
@@ -11,7 +9,6 @@ int gameState = 1;
 
 float[][] terrain;
 
-ControlP5 cp5;
 Island[] island;
 Objects game;
 
@@ -45,20 +42,12 @@ void draw() {
   lights();
   directionalLight(200, 150, 100, width/2, height/2, 0);
 
-
   if (gameState==0) {
-    
     displayGame();
   }
-  
   else if (gameState==1) {
-    
     mainMenu();
-    
   }
-  
-  //println(frameRate);
-  
 }
 
 
@@ -73,31 +62,11 @@ void displayGame() {
   
   game.displayShip();
   
-  for (int i=0; i<10; i++) {
-    island[i].displayIsland();
-  }
+  game.displayIslands();
   
   game.displayFog();
 
-  if (keyPressed) {
-    if (keyCode==UP) {
-      windSpeed -= 0.05;
-      for (int i=0; i<10; i++) {
-        island[i].move(12);
-      }
-    } else if (keyCode==DOWN) {
-      windSpeed += 0.03; 
-      for (int i=0; i<10; i++) {
-        island[i].move(-18);
-      }
-    }
-  }
-  
-  for (int i=0;i<10;i++) {
-    if (island[i].distance<0&&island[i].distance>-500&&boo) {
-      // 
-    }
-  }
+  game.trackMovement();
   
   gameUI();
     

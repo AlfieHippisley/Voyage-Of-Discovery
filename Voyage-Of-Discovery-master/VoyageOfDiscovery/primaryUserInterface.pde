@@ -75,48 +75,16 @@
   }
   
   void menuButtons(){
-    PFont font = createFont("arial",15);
-    cp5=new ControlP5(this);
-    cp5.addButton("Play")
-    .setPosition(45,150)       
-    .setSize(200,40)
-    .setColorBackground( color(100,190,255 ) )
-    .setFont(font)
-    .getCaptionLabel().align(ControlP5.CENTER, ControlP5.CENTER);
-  
-    cp5=new ControlP5(this);
-    cp5.addButton("Leaderboard")
-    .setPosition(45,200)       
-    .setSize(200,40)
-    .setColorBackground( color(100,190,255 ) )
-    .setFont(font)
-    .getCaptionLabel().align(ControlP5.CENTER, ControlP5.CENTER);
-    
-    cp5=new ControlP5(this);
-    cp5.addButton("Controls")
-    .setPosition(45,250)       
-    .setSize(200,40)
-    .setColorBackground( color(100,190,255 ) )
-    .setFont(font)
-    .getCaptionLabel().align(ControlP5.CENTER, ControlP5.CENTER);
-    
-    cp5=new ControlP5(this);
-    cp5.addButton("About")
-    .setPosition(45,300)       
-    .setSize(200,40)
-    .setColorBackground( color(100,190,255 ) )
-    .setFont(font)
-    .getCaptionLabel().align(ControlP5.CENTER, ControlP5.CENTER);
-    
-    
-    cp5=new ControlP5(this);
-    cp5.addButton("Credits")
-    .setPosition(45,350)       
-    .setSize(200,40)
-    .setColorBackground( color(100,190,255 ) )
-    .setFont(font)
-    .getCaptionLabel().align(ControlP5.CENTER, ControlP5.CENTER);
-    
+    Button b1 = new Button(1,45,150,"Play");
+    Button b2 = new Button(2,45,200,"Leaderboard");
+    Button b3 = new Button(3,45,250,"Controls");
+    Button b4 = new Button(4,45,300,"About");
+    Button b5 = new Button(5,45,350,"Credits");
+    b1.drawButton();
+    b2.drawButton();
+    b3.drawButton();
+    b4.drawButton();
+    b5.drawButton();   
   }
   
   

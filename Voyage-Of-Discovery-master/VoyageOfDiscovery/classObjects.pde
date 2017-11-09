@@ -69,6 +69,14 @@ class Objects {
     popMatrix();
   }
 
+  public void displayIslands() {
+    
+    for (int i=0; i<10; i++) {
+      island[i].displayIsland();
+    }
+  
+  }
+
   public void displayFog() {
     
     pushMatrix();
@@ -82,5 +90,28 @@ class Objects {
     }
     
     popMatrix();
+  }
+  
+  public void trackMovement() {
+    
+    if (keyPressed) {
+      if (keyCode==UP) {
+        windSpeed -= 0.05;
+        for (int i=0; i<10; i++) {
+          island[i].move(12);
+        }
+      } else if (keyCode==DOWN) {
+        windSpeed += 0.03; 
+        for (int i=0; i<10; i++) {
+          island[i].move(-18);
+        }
+      }
+      
+      for (int i=0;i<10;i++) {
+        if (island[i].distance<0&&island[i].distance>-500&&boo) {
+          // 
+        }
+      }
+    }
   }
 }
