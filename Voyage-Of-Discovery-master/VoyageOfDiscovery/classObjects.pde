@@ -88,7 +88,6 @@ class Objects {
     for (int i = 10; i>0; i--){
       sphere(2000+(100*i));
     }
-    
     rotateX(-PI/3);
     popMatrix();
   }
