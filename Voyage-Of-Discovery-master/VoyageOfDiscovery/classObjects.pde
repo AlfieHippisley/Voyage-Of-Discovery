@@ -4,6 +4,8 @@ class Objects {
   public void displayShip() {
   
     pushMatrix();
+    
+    strokeWeight(1);
     translate(width/2,(sin(bobbing)*20)+400);
     rotateX(PI/3);
     rotateY(sin(windSpeed)/20);
@@ -31,12 +33,15 @@ class Objects {
     fill(240);
     triangle(-10, -150, -10, 100, -250, 100);
     triangle(10, -150, 10, 100, 250, 100);
+    
     popMatrix();
   }
 
   public void displayWater() {
 
     pushMatrix();
+    
+    strokeWeight(1);
     translate(width/2, height/2+50);
     rotateX(PI/3);
     translate(-w/2, -h/2);
@@ -60,12 +65,14 @@ class Objects {
       }
       endShape();
     }
+    
     popMatrix();
   }
 
   public void displayFog() {
     
     pushMatrix();
+    
     rotateX(PI/3);
     translate(600,0,0);
     noStroke();
@@ -73,6 +80,7 @@ class Objects {
     for (int i = 10; i>0; i--){
       sphere(2000+(100*i));
     }
+    
     popMatrix();
   }
 }
