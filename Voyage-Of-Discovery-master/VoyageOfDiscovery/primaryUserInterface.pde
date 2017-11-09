@@ -9,12 +9,10 @@
   
   void uiBoxes(int score, float time) {
     
-    // Design for boxes
     stroke(230);
     strokeWeight(5);
     fill(50,100,200);
     
-    // Score counter
     rect(0,-100,200,100,20);
     rect(450,-100,300,100,20);
     rect(1020,-100,200,100,20);
