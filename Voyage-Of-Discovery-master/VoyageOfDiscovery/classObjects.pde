@@ -109,7 +109,7 @@ class Objects {
       
       for (int i=0;i<10;i++) {
         if (island[i].distance<0&&island[i].distance>-500&&boo) {
-          // 
+          gameState = 2;
         }
       }
     }

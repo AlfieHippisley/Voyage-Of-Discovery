@@ -11,7 +11,7 @@ float[][] terrain;
 
 Island[] island;
 Objects game;
-
+Question[] q;
 
 
 void setup() {
@@ -25,11 +25,11 @@ void setup() {
   island = new Island[10];
   game = new Objects();
   
+  setQuestions();
   
   for (int i=0; i<10; i++) {
     island[i] = new Island(i*-4000);
   }
-  
 }
 
 
@@ -47,6 +47,10 @@ void draw() {
   }
   else if (gameState==1) {
     mainMenu();
+  }
+  else if (gameState==2) {
+    q[1].displayQuestion();
+    println("stage changed " + mouseX + mouseY);
   }
 }
 
@@ -71,3 +75,19 @@ void displayGame() {
   gameUI();
     
 }
+
+void setQuestions() {
+    
+    q = new Question[10];
+    q[0] = new Question(1,"How many bridges go across the Firth of Tay?", "1","2","3","4","b");
+    q[1] = new Question(2,"Name a comic book Dundee is famous for?","Pokemon","Spiderman","Batman","The Beano","d");
+    q[2] = new Question(3,"What are the people of Dundee referred to as?","Dunwegians","Dons","Dundonians","Deens","c");
+    q[3] = new Question(4,"What is the famous landmark at the top of Dundee?","The Peak","The Law","Arthur's Seat","Bass Rock","b");
+    q[4] = new Question(5,"What was The Law 400 million years ago?","A Volcano","A Mountain","A Waterfall","A Castle","a");
+    q[5] = new Question(6,"Inverness is the 5th largest city in Scotland, where does Dundee come?","First","Second","Third","Fourth","d");
+    q[6] = new Question(7,"What is the V&A designed to look like?","A Pyramid","A Mountain","A Ship","A Space Ship","c");
+    q[7] = new Question(8,"What is it isnpired by?","Scottish Rocks","Boats","The Law","Waves","a");
+    q[8] = new Question(9,"Which of these is a Univerversity in Dundee?","Queen Margaret University","Napier University","Robert Gordon University","Abertay University","d");
+    q[9] = new Question(10,"What kind of Jam is Dundee famous for?","Strawberry Jam","Raspberry Jam","Marmalade Jam","Apricot Jam","c");
+  
+  }
